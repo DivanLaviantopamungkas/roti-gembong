@@ -1,0 +1,266 @@
+/* styles.css */
+/* CSS Tambahan untuk Efek dan Komponen Khusus */
+
+/* ===== GLOBAL & BASE STYLES ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mengurangi animasi untuk user yang prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .reveal-up,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ===== NAVIGATION ACTIVE STATE ===== */
+.nav-link {
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d97706; /* amber-600 */
+  transition: width 0.3s ease;
+}
+
+.nav-link.active {
+  color: #b45309; /* amber-700 */
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Untuk mobile menu link */
+.nav-link-mobile.active {
+  background-color: #fef3c7; /* amber-100 */
+  color: #92400e; /* amber-800 */
+  font-weight: 600;
+}
+
+/* ===== REVEAL ANIMATION CLASSES (IntersectionObserver akan menambahkan ini) ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active,
+.reveal-up.active,
+.reveal-left.active,
+.reveal-right.active {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Delay utilities */
+.delay-75 {
+  transition-delay: 75ms;
+}
+.delay-150 {
+  transition-delay: 150ms;
+}
+.delay-225 {
+  transition-delay: 225ms;
+}
+.delay-300 {
+  transition-delay: 300ms;
+}
+.delay-375 {
+  transition-delay: 375ms;
+}
+.delay-450 {
+  transition-delay: 450ms;
+}
+.delay-525 {
+  transition-delay: 525ms;
+}
+
+/* ===== COMPONENT STYLES ===== */
+/* Hero Background */
+.hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url("/img/hero-roti.jpg"); /* Gunakan placeholder atau gambar Anda */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg {
+    background-attachment: scroll;
+  }
+}
+
+/* Button Styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(
+    to right,
+    #d97706,
+    #b45309
+  ); /* amber-600 to amber-700 */
+  color: white;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(
+    to right,
+    #b45309,
+    #92400e
+  ); /* amber-700 to amber-800 */
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary:focus {
+  outline: 2px solid #fbbf24; /* amber-400 */
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  background-color: white;
+  color: #92400e; /* amber-800 */
+  font-weight: 600;
+  border-radius: 0.75rem;
+  border: 2px solid #d97706; /* amber-600 */
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #fef3c7; /* amber-100 */
+  transform: translateY(-2px);
+}
+
+/* Card Advantage (Keunggulan) */
+.card-advantage {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05),
+    0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  border: 1px solid #fde68a; /* amber-200 */
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.card-advantage:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  border-color: #fbbf24; /* amber-400 */
+}
+
+/* Card Package (Yang Didapat) */
+.card-package {
+  background-color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid #e5e7eb; /* gray-200 */
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.card-package:hover {
+  border-color: #f59e0b; /* amber-500 */
+  box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.15);
+}
+
+/* Form Input */
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background-color: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #f59e0b; /* amber-500 */
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.form-input.error {
+  border-color: #dc2626; /* red-600 */
+  background-color: #fef2f2; /* red-50 */
+}
+
+/* FAQ Component */
+.faq-question {
+  transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #fef3c7 !important; /* amber-100 */
+}
+
+.faq-question[aria-expanded="true"] {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #fef3c7; /* amber-100 */
+  border-bottom: 1px solid #fde68a; /* amber-200 */
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+}
+
+.faq-answer.open {
+  max-height: 500px; /* Nilai cukup besar untuk menampung konten */
+}
