@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
@@ -22,11 +22,11 @@
     <!-- Link to External CSS -->
     <link rel="stylesheet" href="styles.css" />
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="image/logo.jpeg" />
   </head>
   <body
     class="font-sans bg-amber-50 text-gray-800"
-    style="font-family: 'Inter', sans-serif"
+    style="font-family: &quot;Inter&quot;, sans-serif"
   >
     <!-- Back to Top Button -->
     <button
@@ -55,12 +55,21 @@
       id="mainHeader"
       class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-md transition-all duration-300"
     >
-      <nav class="container mx-auto px-4 py-4">
+      <nav class="container mx-auto px-4 py-3">
         <div class="flex justify-between items-center">
-          <!-- Logo -->
-          <a href="#" class="text-2xl font-bold text-amber-900"
-            >Roti Gembong<span class="text-amber-600"> Raja Mahakam</span></a
-          >
+          <!-- Logo dengan Gambar -->
+          <a href="#" class="flex items-center space-x-3">
+            <img
+              src="image/logo.jpeg"
+              alt="Roti Gembong Raja Mahakam"
+              class="h-12 w-auto"
+            />
+            <div class="hidden md:block">
+              <span class="text-xl font-bold text-amber-900">Roti Gembong</span
+              ><br />
+              <span class="text-sm text-amber-700">Raja Mahakam</span>
+            </div>
+          </a>
 
           <!-- Desktop Menu -->
           <ul id="navMenu" class="hidden md:flex space-x-8">
@@ -85,6 +94,11 @@
               >
             </li>
             <li>
+              <a href="#roi" class="nav-link hover:text-amber-700"
+                >Simulasi ROI</a
+              >
+            </li>
+            <li>
               <a href="#sop" class="nav-link hover:text-amber-700">SOP</a>
             </li>
             <li>
@@ -92,9 +106,6 @@
             </li>
             <li>
               <a href="#faq" class="nav-link hover:text-amber-700">FAQ</a>
-            </li>
-            <li>
-              <a href="#kontak" class="nav-link hover:text-amber-700">Kontak</a>
             </li>
           </ul>
 
@@ -172,6 +183,13 @@
           </li>
           <li>
             <a
+              href="#roi"
+              class="block py-2 px-4 hover:bg-amber-100 rounded-lg nav-link-mobile"
+              >Simulasi ROI</a
+            >
+          </li>
+          <li>
+            <a
               href="#sop"
               class="block py-2 px-4 hover:bg-amber-100 rounded-lg nav-link-mobile"
               >SOP</a
@@ -189,13 +207,6 @@
               href="#faq"
               class="block py-2 px-4 hover:bg-amber-100 rounded-lg nav-link-mobile"
               >FAQ</a
-            >
-          </li>
-          <li>
-            <a
-              href="#kontak"
-              class="block py-2 px-4 hover:bg-amber-100 rounded-lg nav-link-mobile"
-              >Kontak</a
             >
           </li>
           <li class="pt-2">
@@ -279,6 +290,14 @@
           </div>
           <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="reveal-left">
+              <!-- Gambar Produk -->
+              <div class="mb-8 rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src="image/kotakbox.jpeg"
+                  alt="Roti Gembong Fresh dari Oven"
+                  class="w-full h-64 object-cover"
+                />
+              </div>
               <div
                 class="bg-gradient-to-br from-amber-100 to-amber-50 p-8 rounded-2xl border border-amber-200 shadow-lg"
               >
@@ -338,6 +357,14 @@
               </div>
             </div>
             <div class="reveal-right">
+              <!-- Gambar Toko -->
+              <div class="mb-8 rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src="image/kotalbox2.jpeg"
+                  alt="Toko Roti Gembong Raja Mahakam"
+                  class="w-full h-64 object-cover"
+                />
+              </div>
               <div class="bg-gray-800 text-white p-8 rounded-2xl shadow-xl">
                 <h3 class="text-2xl font-bold text-amber-300 mb-4">
                   Legalitas & Struktur yang Jelas
@@ -543,10 +570,41 @@
               </p>
             </div>
           </div>
+          <!-- Gambar Keunggulan -->
+          <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+            <div class="rounded-xl overflow-hidden shadow-md">
+              <img
+                src="image/gmb5.jpeg"
+                alt="Pelayanan Ramah"
+                class="w-full h-40 object-cover"
+              />
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-md">
+              <img
+                src="image/gmb2.jpeg"
+                alt="Produk Berkualitas"
+                class="w-full h-40 object-cover"
+              />
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-md">
+              <img
+                src="image/gmb3.jpeg"
+                alt="Toko Modern"
+                class="w-full h-40 object-cover"
+              />
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-md">
+              <img
+                src="image/gmb4.jpeg"
+                alt="Tim Profesional"
+                class="w-full h-40 object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Section: Yang Didapat -->
+      <!-- Section: Apa yang Anda Dapatkan -->
       <section id="yang-didapat" class="py-16 bg-white scroll-mt-24">
         <div class="container mx-auto px-4">
           <div class="text-center mb-12 reveal">
@@ -759,6 +817,41 @@
               </ul>
             </div>
           </div>
+          <!-- Gambar Peralatan -->
+          <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+            <div class="rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="image/proses.jpg"
+                alt="Oven Roti Profesional"
+                class="w-full h-56 object-cover"
+              />
+              <div class="p-4 bg-white">
+                <p class="font-semibold text-amber-800">
+                  Oven Kapasitas Komersial
+                </p>
+              </div>
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="image/display.jfif"
+                alt="Display Showcase"
+                class="w-full h-56 object-cover"
+              />
+              <div class="p-4 bg-white">
+                <p class="font-semibold text-amber-800">Meja Display Modern</p>
+              </div>
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="image/sistemkasir.jpg"
+                alt="Sistem Kasir Digital"
+                class="w-full h-56 object-cover"
+              />
+              <div class="p-4 bg-white">
+                <p class="font-semibold text-amber-800">Sistem Kasir Digital</p>
+              </div>
+            </div>
+          </div>
           <p class="text-center text-gray-500 text-sm mt-12 reveal">
             * Spesifikasi peralatan dapat menyesuaikan tanpa mengurangi fungsi
             dan kualitas. Seluruh barang tetap menjadi hak milik Franchisor
@@ -967,6 +1060,340 @@
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW SECTION: Simulasi ROI -->
+      <section
+        id="roi"
+        class="py-16 bg-gradient-to-b from-white to-amber-50 scroll-mt-24"
+      >
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12 reveal">
+            <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
+              Simulasi Perhitungan ROI (Return on Investment)
+            </h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+              Berikut adalah contoh proyeksi keuangan berdasarkan model bisnis
+              standar.
+              <span class="font-semibold text-amber-700"
+                >Ini adalah simulasi/contoh, bukan jaminan.</span
+              >
+            </p>
+          </div>
+
+          <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-8">
+              <!-- Kolom Kiri: Asumsi dan Input -->
+              <div class="reveal-left">
+                <div
+                  class="bg-white p-8 rounded-2xl shadow-lg border border-amber-200 h-full"
+                >
+                  <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                    Asumsi Dasar Perhitungan
+                  </h3>
+
+                  <div class="space-y-6">
+                    <div>
+                      <label class="block text-gray-700 font-medium mb-2"
+                        >Investasi Awal</label
+                      >
+                      <div class="p-4 bg-amber-50 rounded-lg">
+                        <p
+                          class="text-3xl font-bold text-amber-700 text-center"
+                        >
+                          Rp 200.000.000
+                        </p>
+                        <p class="text-sm text-gray-600 text-center mt-2">
+                          (Nilai tengah estimasi)
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                      <div>
+                        <label class="block text-gray-700 font-medium mb-2"
+                          >Harga Jual Rata-rata</label
+                        >
+                        <div class="p-3 bg-gray-50 rounded-lg text-center">
+                          <p class="text-xl font-bold text-gray-800">
+                            Rp 15.000
+                          </p>
+                          <p class="text-sm text-gray-600">per roti</p>
+                        </div>
+                      </div>
+                      <div>
+                        <label class="block text-gray-700 font-medium mb-2"
+                          >HPP (Harga Pokok Produksi)</label
+                        >
+                        <div class="p-3 bg-gray-50 rounded-lg text-center">
+                          <p class="text-xl font-bold text-gray-800">
+                            Rp 6.000
+                          </p>
+                          <p class="text-sm text-gray-600">per roti (40%)</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label class="block text-gray-700 font-medium mb-2"
+                        >Target Penjualan Harian</label
+                      >
+                      <div class="flex items-center space-x-4">
+                        <div
+                          class="flex-1 p-3 bg-gray-50 rounded-lg text-center"
+                        >
+                          <p class="text-xl font-bold text-gray-800">80-120</p>
+                          <p class="text-sm text-gray-600">pcs per hari</p>
+                        </div>
+                        <div class="text-gray-500">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="p-4 bg-blue-50 rounded-lg border border-blue-200"
+                    >
+                      <h4 class="font-bold text-blue-800 mb-2">
+                        Asumsi Biaya Operasional Bulanan
+                      </h4>
+                      <ul class="text-sm text-gray-700 space-y-1">
+                        <li class="flex justify-between">
+                          <span>Sewa Ruko</span><span>Rp 10-20 Jt</span>
+                        </li>
+                        <li class="flex justify-between">
+                          <span>Gaji Karyawan (2-3 orang)</span
+                          ><span>Rp 6-9 Jt</span>
+                        </li>
+                        <li class="flex justify-between">
+                          <span>Listrik, Air, Gas</span><span>Rp 2-3 Jt</span>
+                        </li>
+                        <li class="flex justify-between">
+                          <span>Bahan Baku Variabel</span
+                          ><span>35-45% dari omzet</span>
+                        </li>
+                        <li class="flex justify-between">
+                          <span>Royalty & Marketing Fee</span
+                          ><span>8-12% dari omzet</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Kolom Kanan: Hasil Simulasi -->
+              <div class="reveal-right delay-150">
+                <div
+                  class="bg-white p-8 rounded-2xl shadow-lg border border-amber-200 h-full"
+                >
+                  <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                    Proyeksi Keuangan (Contoh)
+                  </h3>
+
+                  <div class="space-y-6">
+                    <!-- Omzet Bulanan -->
+                    <div
+                      class="p-4 bg-green-50 rounded-lg border border-green-200"
+                    >
+                      <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-bold text-green-800">
+                          Omzet Bulanan (Estimasi)
+                        </h4>
+                        <span class="text-2xl font-bold text-green-700"
+                          >Rp 36-54 Jt</span
+                        >
+                      </div>
+                      <p class="text-sm text-gray-600">
+                        Asumsi: 100 pcs/hari × Rp 15.000 × 30 hari = Rp
+                        45.000.000 (rata-rata)
+                      </p>
+                    </div>
+
+                    <!-- Laba Kotor -->
+                    <div
+                      class="p-4 bg-amber-50 rounded-lg border border-amber-200"
+                    >
+                      <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-bold text-amber-800">
+                          Laba Kotor Bulanan
+                        </h4>
+                        <span class="text-2xl font-bold text-amber-700"
+                          >Rp 21,6-32,4 Jt</span
+                        >
+                      </div>
+                      <p class="text-sm text-gray-600">
+                        Margin kotor: 60% (setelah dikurangi HPP 40%)
+                      </p>
+                    </div>
+
+                    <!-- Laba Bersih -->
+                    <div
+                      class="p-4 bg-blue-50 rounded-lg border border-blue-200"
+                    >
+                      <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-bold text-blue-800">
+                          Laba Bersih Bulanan (Estimasi)
+                        </h4>
+                        <span class="text-2xl font-bold text-blue-700"
+                          >Rp 8-15 Jt</span
+                        >
+                      </div>
+                      <p class="text-sm text-gray-600">
+                        Setelah dikurangi: sewa, gaji, utilitas, royalty, dll.
+                      </p>
+                    </div>
+
+                    <!-- ROI Calculation -->
+                    <div
+                      class="p-4 bg-purple-50 rounded-lg border border-purple-200"
+                    >
+                      <h4 class="font-bold text-purple-800 mb-3">
+                        Estimasi Periode Pengembalian Modal (ROI)
+                      </h4>
+                      <div class="text-center mb-4">
+                        <div
+                          class="inline-block p-4 bg-white rounded-lg shadow"
+                        >
+                          <p class="text-4xl font-bold text-purple-700">
+                            18-30
+                          </p>
+                          <p class="text-sm text-gray-600">Bulan</p>
+                        </div>
+                      </div>
+                      <p class="text-sm text-gray-600 text-center">
+                        Berdasarkan laba bersih rata-rata Rp 11,5 Jt/bulan<br />
+                        dari investasi Rp 200 Jt
+                      </p>
+                    </div>
+
+                    <!-- Disclaimer -->
+                    <div class="p-4 bg-red-50 rounded-lg border border-red-200">
+                      <div class="flex items-start">
+                        <svg
+                          class="w-5 h-5 text-red-600 mr-3 mt-0.5 flex-shrink-0"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <div>
+                          <h5 class="font-bold text-red-800 mb-1">
+                            PENTING: Ini Hanya Simulasi/Contoh
+                          </h5>
+                          <p class="text-sm text-red-700">
+                            <strong>Bukan jaminan profit.</strong> Angka aktual
+                            sangat bergantung pada:<br />
+                            1. Lokasi dan trafik pengunjung<br />
+                            2. Manajemen operasional & kontrol biaya<br />
+                            3. Kompetisi lokal dan kondisi pasar<br />
+                            4. Keterampilan marketing pemilik
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chart Visualization -->
+            <div class="mt-12 reveal">
+              <div
+                class="bg-white p-8 rounded-2xl shadow-lg border border-amber-200"
+              >
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+                  Visualisasi Aliran Keuangan (Contoh)
+                </h3>
+                <div class="relative h-64 bg-gray-50 rounded-lg p-6">
+                  <!-- Simple chart representation -->
+                  <div class="flex items-end h-40 space-x-4">
+                    <div class="flex-1 flex flex-col items-center">
+                      <div
+                        class="w-full bg-green-400 rounded-t"
+                        style="height: 100%"
+                      ></div>
+                      <p class="mt-2 text-sm font-medium">Omzet</p>
+                      <p class="text-xs text-gray-600">Rp 45 Jt</p>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center">
+                      <div
+                        class="w-full bg-amber-400 rounded-t"
+                        style="height: 60%"
+                      ></div>
+                      <p class="mt-2 text-sm font-medium">Laba Kotor</p>
+                      <p class="text-xs text-gray-600">Rp 27 Jt</p>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center">
+                      <div
+                        class="w-full bg-blue-400 rounded-t"
+                        style="height: 30%"
+                      ></div>
+                      <p class="mt-2 text-sm font-medium">Laba Bersih</p>
+                      <p class="text-xs text-gray-600">Rp 11.5 Jt</p>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center">
+                      <div
+                        class="w-full bg-purple-400 rounded-t"
+                        style="height: 10%"
+                      ></div>
+                      <p class="mt-2 text-sm font-medium">ROI Timeline</p>
+                      <p class="text-xs text-gray-600">24 Bulan</p>
+                    </div>
+                  </div>
+                  <div class="mt-8 text-center text-sm text-gray-600">
+                    <p>
+                      Grafik di atas menunjukkan
+                      <strong>contoh perbandingan</strong> aliran keuangan dalam
+                      model bisnis ini.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA setelah ROI -->
+            <div class="mt-12 text-center reveal-up">
+              <p class="text-lg text-gray-700 mb-6">
+                Ingin simulasi yang lebih personal sesuai lokasi dan kondisi
+                Anda?
+              </p>
+              <a
+                href="https://wa.me/62812XXXXXXX"
+                target="_blank"
+                class="btn-primary inline-flex items-center text-lg px-8 py-4"
+              >
+                <svg
+                  class="w-6 h-6 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.36-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.99c-.004 5.45-4.438 9.88-9.885 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 005.683 1.447h.005c6.554 0 11.89-5.333 11.893-11.892 0-3.18-1.24-6.162-3.495-8.411"
+                  />
+                </svg>
+                Konsultasi Simulasi Detail via WhatsApp
+              </a>
             </div>
           </div>
         </div>
@@ -1197,6 +1624,43 @@
                       masih berlaku
                     </li>
                   </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Gambar SOP -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+              <div class="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src="image/proses.jpg"
+                  alt="Proses Produksi Standar"
+                  class="w-full h-56 object-cover"
+                />
+                <div class="p-4 bg-white">
+                  <p class="font-semibold text-amber-800">
+                    Proses Produksi Terstandar
+                  </p>
+                </div>
+              </div>
+              <div class="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src="image/pelayan.avif"
+                  alt="Pelayanan Customer"
+                  class="w-full h-56 object-cover"
+                />
+                <div class="p-4 bg-white">
+                  <p class="font-semibold text-amber-800">
+                    Pelayanan Pelanggan
+                  </p>
+                </div>
+              </div>
+              <div class="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src="image/kebersihan.jpg"
+                  alt="Kebersihan Area Toko"
+                  class="w-full h-56 object-cover"
+                />
+                <div class="p-4 bg-white">
+                  <p class="font-semibold text-amber-800">Standar Kebersihan</p>
                 </div>
               </div>
             </div>
@@ -1923,9 +2387,18 @@
         <div class="grid md:grid-cols-4 gap-8 mb-8">
           <!-- Brand Info -->
           <div>
-            <a href="#" class="text-2xl font-bold text-white mb-4 inline-block"
-              >Roti Gembong<span class="text-amber-400"> Raja Mahakam</span></a
-            >
+            <div class="flex items-center mb-4">
+              <img
+                src="images/logo-roti-gembong.png"
+                alt="Roti Gembong Raja Mahakam"
+                class="h-10 w-auto mr-3"
+              />
+              <div>
+                <span class="text-xl font-bold text-white">Roti Gembong</span
+                ><br />
+                <span class="text-sm text-amber-400">Raja Mahakam</span>
+              </div>
+            </div>
             <p class="text-gray-400 mb-4">
               Bakery tradisional modern dengan sistem franchise ruko terpercaya,
               membangun jaringan kuliner berkualitas di seluruh Indonesia.
@@ -1956,6 +2429,13 @@
                   href="#investasi"
                   class="text-gray-400 hover:text-amber-300 transition-colors"
                   >Paket Investasi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#roi"
+                  class="text-gray-400 hover:text-amber-300 transition-colors"
+                  >Simulasi ROI</a
                 >
               </li>
               <li>
